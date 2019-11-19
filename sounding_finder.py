@@ -8,6 +8,7 @@ from itertools import takewhile
 
 def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_df=None ):
     """ To read IGRA data-set
+    
     Arguments:
     
     file: ID of the station name only. Eg, 'RSM00022271'
@@ -17,8 +18,8 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
     to_df: To save the extracted value as a dataframe with variable df.
     
     When to_df is not None, the function returns a df
+    Otherwise to_print option can be used to simply print the data.
     
-    Also returns p_+file, temp_+file, dew_+file as np arrays
     
     """
     global df
@@ -27,7 +28,7 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
     # To read IGRA derived files
     
     
-        path = '/home/ollie/muali/Data/'
+        path = '/home/ollie/muali/Data/'  # change path to dir where IGRA dataset is stored
 
         f2 = open('copyIGRA.txt','w')
 
@@ -85,7 +86,7 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
                 if to_print != None:
                     print(line)
 
-         # where i use itertools.takewhile to get an iterator over the lines until a contition is met (until the first header is found in your case).
+         # where I use itertools.takewhile to get an iterator over the lines until a contition is met (until the first header is found in your case).
 
          #the deque part is just the consume pattern suggested in the itertools recipes. it just fast-forwards to the point where the given condition does not hold anymore. 
 
