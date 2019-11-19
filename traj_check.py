@@ -6,15 +6,17 @@ from dateutil.parser import parse
 def trajcheck(file, lat_diff=1., lon_diff=1., search=None, path = '/home/ollie/muali/Data/winter_all/'):
     
     """
-    This function checks if a given trajectory is passing through a observation station.
-    Outputs the matching hour, Obs Station Name, etc.
+    This function checks the observation stations in the vicinity of a given trajectory.
+    Returns: 
+    the matching hour, Obs Station Name, etc.
     Modified to give distance in km between the traj and station as well
     
+    Arguments:
     file_= Name of the time from winter_all folder as'tdump_lvl_MM_DD_HH'
     
-    lat_diff= Minimum latitude difference to satisfy, default 1.0
+    lat_diff= Furthest difference in degrees along latitude between observation station and trajectory, default 1.0
     
-    lon_diff =Minimum latitude difference to satisfy, default 1.0
+    lon_diff = Furthest difference in degrees along longitude between observation station and trajectory, default 1.0
     
     search: (str) to be used for searching a pattern from the output
     
