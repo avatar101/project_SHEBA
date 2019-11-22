@@ -3,7 +3,7 @@ This repository contains code used to reproduce analysis for the paper. The note
 
 # Set Up
 * In order to re-run the code, the user must download the trajectory data used in this study and the IGRA dataset v2.
-* Install the packages used by first installing anaconda.
+* Before proceeding further install `anaconda` if it isn't already installed. Users can also install `miniconda` if they don't want to install all the packages that comes with anaconda.
 * On the termial execute `conda env create -f work_environment_journal.yml` to install the packages used in this study. 
 
 
