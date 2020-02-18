@@ -2,9 +2,9 @@
 This repository contains code used to reproduce analysis for the paper. The notebooks are available in read format and can be viewed on GitHub.
 
 # Set Up
-* In order to re-run the code, the user must download the trajectory data used in this study and the IGRA dataset v2.
+* In order to re-run the code, the user must download the [trajectory data](https://doi.pangaea.de/10.1594/PANGAEA.899851?format=html#download) used in this study, the [IGRA dataset version2](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00975) and the [SHEBA radiosonde data](https://data.eol.ucar.edu/dataset/13.202) and change the path to these datasets accordingly in the code.
 * Before proceeding further install `anaconda` if it isn't already installed. Users can also install `miniconda` if they don't want to install all the packages that comes with anaconda.
-* On the termial execute `conda env create -f work_environment_journal.yml` to install the packages used in this study. 
+* On the termial execute `conda env create -f work_environment_journal.yml` to install the packages used in this study from work_environment_journal.yml provided here. 
 
 
 ## Cloudy state profiles
