@@ -7,7 +7,8 @@ from itertools import takewhile
 
 
 def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_df=None ):
-    """ To read IGRA data-set
+    """ 
+    This function reads IGRA data-set version 2
     
     Arguments:
     
@@ -88,7 +89,7 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
 
          # where I use itertools.takewhile to get an iterator over the lines until a contition is met (until the first header is found in your case).
 
-         #the deque part is just the consume pattern suggested in the itertools recipes. it just fast-forwards to the point where the given condition does not hold anymore. 
+         # the deque part is just the consume pattern suggested in the itertools recipes. It just fast-forwards to the point where the given condition does not hold anymore. 
 
         f2.close()
 
@@ -100,26 +101,17 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
             col = [(0,2), (3,8), (9,15), (16,21), (22,27), (28,33), (34,39), (40,45), (46,51)]
             col_names = ['Ltyp', 'Etime', 'pressure', 'Gph', 'temperature',\
                         'relative_humidity' , 'dewpoint', 'Wdir', 'Wspd']
+            
             df = pd.read_fwf('copyIGRA.txt', header=None, colspecs= col, names=col_names, na_values=('-8888','-9999'))
 
-            #df[['pressure','temperature', 'ewpt', 'Wspd']] = df[['Pressure','Temp', 'Dewpt', 'Wspd']].replace(-9999, np.nan)
-            #df[['Temp', 'Dewpt', 'Wspd']] = df[['Temp', 'Dewpt', 'Wspd']].replace(-8888, np.nan)# means missing values
-            #df.replace(-8888, np.nan, inplace=True) # 8888 means value removed by quality check
-
             df[['temperature', 'relative_humidity', 'dewpoint', 'Wspd']] = df[['temperature', 'relative_humidity', 'dewpoint',\
-            'Wspd']]/10 # dividing them by 10, see read me
+            'Wspd']]/10 # dividing them by 10
             df['temperature'] = df['temperature'] + 273.15  # to change in Kelvin
             df['dewpoint'] = df['temperature'] - df['dewpoint'] # converting Dewpt depression to Dewpt
             df['pressure'] = df['pressure']/100 # converting to hPa or millibar
 
             df = df.dropna(subset=('pressure', 'temperature', 'dewpoint'), how='any').reset_index(drop=True) # dropping nan
-
-            #global p_+file, temp_+file, dew_+file
-
-            #p_+file = np.array(df['Pressure'])
-            #temp_+file = np.array(df['Temp'])
-            #dew_+file= np.array(df['Dewpt'])
-
+            
         os.remove('copyIGRA.txt') # delete opened file to free up memory
 
 
