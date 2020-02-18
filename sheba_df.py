@@ -4,7 +4,7 @@ import pandas as pd
 def sheba_df(file, dropnan=False):
     """
     To load sheba sounding data into a dataframe
-    file = path + filename
+    file (str) = path to SHEBA sounding data
     dropnan: DONT GIVE INPUT as a STRING
     Temp and Dewpt in Kelvin , pressure in hPa"""
     
