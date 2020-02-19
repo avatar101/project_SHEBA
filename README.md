@@ -1,11 +1,14 @@
 # Project SHEBA
-This repository contains code used to reproduce analysis for the paper. The notebooks are also available in read format and can be viewed here on GitHub.
+This repository contains code used to reproduce figures for the paper. The notebooks are also available in read format and can be viewed here on GitHub.
 
 # Set Up
 * In order to re-run the code, the user must download the [trajectory data](https://doi.pangaea.de/10.1594/PANGAEA.899851?format=html#download) used in this study, the [IGRA dataset version2](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00975) and the [SHEBA radiosonde data](https://data.eol.ucar.edu/dataset/13.202) and change the path to these datasets accordingly in the code.
 * Before proceeding further install `anaconda` if it isn't already installed. Users can also install `miniconda` if they don't want to install all the packages that comes with anaconda.
 * On the termial execute `conda env create -f work_environment_journal.yml` to install the packages used in this study from work_environment_journal.yml provided here. 
 
+## Cloudy vs Clear state trajectories
+
+[Traj_cloudy_vs_clear_v_journal.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/Traj_cloudy_vs_clear_v_journal.ipynb) file contains the figure used to compare all the trajectories for clear vs cloudy states.
 
 ## Cloudy state profiles
 [All_cloudy_profiles_v_28_10_2019.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/All_cloudy_profiles_v_28_10_2019.ipynb) file contains the figures used to show cloudy state analysis
