@@ -6,7 +6,10 @@ from dateutil.parser import parse
 def trajcheck(file, lat_diff=1., lon_diff=1., search=None, path = '/home/ollie/muali/Data/winter_all/'):
     
     """
-    This function checks the observation stations in the vicinity of a given trajectory.
+    This function checks the observation stations in the vicinity of a given trajectory. It reads the trajectory data and
+    searches for an observation station nearby the trajectory based on the IGRA v2 dataset. Use lat_diff and lon_diff parameters
+    to increase the radius of your search
+    
     Returns: 
     the matching hour, Obs Station Name, etc.
     Modified to give distance in km between the traj and station as well
@@ -14,9 +17,9 @@ def trajcheck(file, lat_diff=1., lon_diff=1., search=None, path = '/home/ollie/m
     Arguments:
     file_= Name of the time from winter_all folder as'tdump_lvl_MM_DD_HH'
     
-    lat_diff= Furthest difference in degrees along latitude between observation station and trajectory, default 1.0
+    lat_diff= Farthest difference in degrees along latitude between observation station and trajectory, default 1.0
     
-    lon_diff = Furthest difference in degrees along longitude between observation station and trajectory, default 1.0
+    lon_diff = Farthest difference in degrees along longitude between observation station and trajectory, default 1.0
     
     search: (str) to be used for searching a pattern from the output
     
@@ -33,7 +36,7 @@ def trajcheck(file, lat_diff=1., lon_diff=1., search=None, path = '/home/ollie/m
     
     file_name = path + file
     
-    df_IGR = pd.read_excel('/home/ollie/muali/python_notebooks/IGR_25N_v2.xlsx')
+    df_IGR = pd.read_excel('IGR_25N_v2.xlsx')
     #f = open(file_name,'rb+')
     
     # getting launch date
@@ -44,7 +47,7 @@ def trajcheck(file, lat_diff=1., lon_diff=1., search=None, path = '/home/ollie/m
     #l_date = parse(date_str)
     
     df = pd.read_csv(file_name, skiprows=7, header=None, delim_whitespace=True) 
-    # a very efficient way to rename columns
+    
     # dict to rename columns
     cols_renames = {2: 'year', 3: 'month', 4: 'day', 5: 'hour', 6: 'minute'}
 
