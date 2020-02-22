@@ -3,10 +3,13 @@ import pandas as pd
 
 def sheba_df(file, dropnan=False):
     """
-    To load sheba sounding data into a dataframe
-    file (str) = path to SHEBA sounding data
+    Function to load the sounding data at SHEBA into a dataframe and returns the dataframe
+    Arguments:
+    file (str) = full path to SHEBA sounding data
     dropnan: DONT GIVE INPUT as a STRING
-    Temp and Dewpt in Kelvin , pressure in hPa"""
+    Returns: 
+    A pandas dataframe containing pressure (hPa), relative humidity, temperature (K), Dew point (K)
+    """
     
     #path = '/home/ollie/muali/data_work/Sounding_data/unzipped_data/'
     df = pd.read_csv(file, delim_whitespace=True,\
