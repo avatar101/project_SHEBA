@@ -22,4 +22,5 @@ dependencies:
   - pandas=0.24.2
   - pint=0.9
   - siphon
+  - seaborn
   - xarray=0.12.1
