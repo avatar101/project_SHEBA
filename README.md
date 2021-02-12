@@ -22,4 +22,4 @@ This repository contains code used to reproduce figures for the paper. The noteb
 ## Important modules
 * [traj_check.py](https://github.com/avatar101/project_SHEBA/blob/master/traj_check.py) checks if a given trajectory is passing through a given observation station. *Prerequiste: Path to IGR_25N_v2.xlsx file to function*
 
-* [sounding_finder.py](https://github.com/avatar101/project_SHEBA/blob/master/sounding_finder.py) reads IGRA data-set from a particular station and for a particular date and returns it as a Pandas dataframe. *Prerequiste: It requires the user to first download the IGRA v2 dataset separately. In this function change the path (line 31) to dir where IGRA dataset is stored before using.* 
+* [sounding_finder.py](https://github.com/avatar101/project_SHEBA/blob/master/sounding_finder.py) reads IGRA data-set from a particular station and for a particular date and returns it as a Pandas dataframe. *Prerequiste: It requires the user to first download the IGRA v2 dataset separately. In this function change the path (line 31 and line 75) to dir where IGRA dataset is stored before using.* 
