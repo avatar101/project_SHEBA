@@ -69,9 +69,11 @@ def sounding_finder(file ,from_line, to_line, derived=False, to_print=None, to_d
 
     
     else:
-        
+    # reads non-derived sounding data
+    # this is what we have used in the study
 
-        path = '/home/ollie/muali/Data/IGRA_unzipped/'
+        path = '/home/ollie/muali/Data/IGRA_unzipped/' # change path to dir where IGRA dataset is stored
+
 
         f2 = open('copyIGRA.txt','w')
 
