@@ -11,10 +11,10 @@ This repository contains code used to reproduce figures for the paper. The noteb
 [Traj_cloudy_vs_clear_v_journal.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/Traj_cloudy_vs_clear_v_journal.ipynb) file contains the figure used to compare all the trajectories for clear vs cloudy states.
 
 ## Cloudy state profiles
-[All_cloudy_profiles_v_28_10_2019.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/All_cloudy_profiles_v_28_10_2019.ipynb) file contains the figures used to show cloudy state analysis
+[All_cloudy_profiles](https://github.com/avatar101/project_SHEBA/blob/master/All_cloudy_profiles_v_journal.ipynb) file contains the figures used to show cloudy state analysis
 
 ## Clear state profiles
-[all_clear_profiles_v31_10_2019.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/all_clear_profiles_v31_10_2019.ipynb) file contains the figures used for clear state analysis
+[all_clear_profiles](https://github.com/avatar101/project_SHEBA/blob/master/All_clear_profiles_v_journal.ipynb) file contains the figures used for clear state analysis
 
 ## Forward trajectory profile
 [Plot_forward_journal2.ipynb](https://github.com/avatar101/project_SHEBA/blob/master/Plot_forward_journal2.ipynb) contains the figures used for forward trajectory analysis
