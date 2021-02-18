@@ -1,5 +1,5 @@
 # Project SHEBA
-This repository contains code used to reproduce figures for the Paper: `[Following moist intrusions into the Arctic using SHEBA observations in a Lagrangian perspective](https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.3859)`. The notebooks are also available in read format and can be viewed here on GitHub.
+This repository contains code used to reproduce figures for the Paper: [Following moist intrusions into the Arctic using SHEBA observations in a Lagrangian perspective](https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/qj.3859). The notebooks are also available in read format and can be viewed here on GitHub.
 
 # Set Up
 * In order to re-run the code, the user must download the [trajectory data](https://doi.pangaea.de/10.1594/PANGAEA.899851?format=html#download) used in this study, the [IGRA dataset version2](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00975) and the [SHEBA radiosonde data](https://data.eol.ucar.edu/dataset/13.202) and change the path to these datasets accordingly in the code.
